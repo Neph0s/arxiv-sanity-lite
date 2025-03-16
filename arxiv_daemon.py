@@ -54,6 +54,7 @@ if __name__ == '__main__':
                 papers = parse_response(resp)
                 time.sleep(0.5)
                 if len(papers) == 100:
+                    logging.info("successfully fetched 100 papers")
                     break # otherwise we have to try again
             except Exception as e:
                 logging.warning(e)
